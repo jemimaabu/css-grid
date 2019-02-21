@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+main {
+    width: 75vw;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside article"
+    "aside footer";
+    grid-template-rows: minmax(min-content, max-content) 5fr minmax(min-content, max-content);
+    grid-template-columns: 1fr 5fr;
+}
+header {
+    grid-area: header;
+    background-color: #E83377;
+    max-height: max-content;
+}
+aside {
+    grid-area: aside;
+    background-color: #BDB77E;
+}
+article {
+    grid-area: article;
+    background-color: #E7AB7F;
+}
+footer {
+    grid-area: footer;
+    background-color: #77A793;
+}
+header, aside, footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article {
+    display: grid;
+    grid-template-rows: repeat(3, [row] minmax(min-content,max-content));
+    grid-template-columns: repeat(2, [col] minmax(min-content,max-content));
+    padding: 1rem;
+    grid-gap: 1rem;
+}
+article h1 {
+    margin: 0;
+    text-align: center;
+    grid-column: col 1 / span 2;
+}
+article #image {
+    grid-row: row 2;
+    grid-column: col 1;
+}
+article #content {
+    grid-row: row 2;
+    grid-column: col 2;
+}
+article #content2 {
+    grid-row: row 3;
+    grid-column: col 1 / span 2;
+}
+#image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
