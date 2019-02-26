@@ -1,0 +1,45 @@
+.grid-parent {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav content"
+    "nav footer";
+    grid-template-columns: 
+        minmax(min-content, 1fr) 
+        4fr;
+    grid-template-rows: 
+        1fr 
+        4fr 
+        1fr;
+    height: 100vh;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.grid-parent > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+header {
+    grid-area: header;
+    background-color: #f20051;
+}
+
+aside {
+    grid-area: nav;
+    background-color: #aabf3c;
+}
+
+main {
+    grid-area: content;
+    background-color: orangered;
+    display: grid;
+}
+
+footer {
+    grid-area: footer;
+    background-color: darkgray;
+}
