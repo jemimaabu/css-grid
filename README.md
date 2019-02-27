@@ -1,5 +1,5 @@
 # css-grid
-CSS grid demo for Frontstack
+CSS grid demo for Frontstack.
 
 Link for the Frontstack blind demo: [https://jemimaabu.github.io/css-grid/Frontstack/index.html](https://jemimaabu.github.io/css-grid/Frontstack/index.html)
 
